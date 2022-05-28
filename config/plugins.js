@@ -20,6 +20,7 @@ module.exports = ({ env }) => ({
             providerOptions: {
                 host: env('SMTP_HOST', 'host229.checkdomain.de'),
                 port: env('SMTP_PORT', 465),
+                secure: true,
                 auth: {
                     user: env('SMTP_USERNAME'),
                     pass: env('SMTP_PASSWORD'),
@@ -27,8 +28,8 @@ module.exports = ({ env }) => ({
                 // ... any custom nodemailer options
             },
             settings: {
-                defaultFrom: 'hello@example.com',
-                defaultReplyTo: 'hello@example.com',
+                defaultFrom: 'info@theresas-artwork.de',
+                defaultReplyTo: 'info@theresas-artwork.de',
             },
         },
     },
